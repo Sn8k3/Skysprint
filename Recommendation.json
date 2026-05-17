@@ -1,0 +1,52 @@
+{
+  "name": "Recommendation",
+  "type": "object",
+  "properties": {
+    "building_id": {
+      "type": "string",
+      "description": "Related building if applicable"
+    },
+    "type": {
+      "type": "string",
+      "enum": [
+        "new_building",
+        "strategy",
+        "correction",
+        "feature",
+        "other"
+      ],
+      "description": "Type of recommendation"
+    },
+    "title": {
+      "type": "string",
+      "description": "Title of the recommendation"
+    },
+    "description": {
+      "type": "string",
+      "description": "Detailed description"
+    },
+    "submitter_name": {
+      "type": "string"
+    },
+    "submitter_email": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "rejection_reason": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "type",
+    "title",
+    "description"
+  ]
+}
