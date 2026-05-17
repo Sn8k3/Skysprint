@@ -1,0 +1,52 @@
+{
+  "name": "Video",
+  "type": "object",
+  "properties": {
+    "building_id": {
+      "type": "string",
+      "description": "Reference to the building"
+    },
+    "title": {
+      "type": "string",
+      "description": "Video title"
+    },
+    "url": {
+      "type": "string",
+      "description": "Video URL (YouTube, etc.)"
+    },
+    "thumbnail_url": {
+      "type": "string",
+      "description": "Thumbnail image URL"
+    },
+    "uploader_name": {
+      "type": "string",
+      "description": "Name of uploader"
+    },
+    "uploader_email": {
+      "type": "string",
+      "description": "Email of uploader"
+    },
+    "description": {
+      "type": "string",
+      "description": "Video description"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "approved",
+        "rejected"
+      ],
+      "default": "pending"
+    },
+    "rejection_reason": {
+      "type": "string",
+      "description": "Reason for rejection"
+    }
+  },
+  "required": [
+    "building_id",
+    "title",
+    "url"
+  ]
+}
