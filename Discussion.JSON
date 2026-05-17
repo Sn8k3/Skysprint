@@ -1,0 +1,56 @@
+{
+  "name": "Discussion",
+  "type": "object",
+  "properties": {
+    "title": {
+      "type": "string"
+    },
+    "content": {
+      "type": "string"
+    },
+    "author_name": {
+      "type": "string"
+    },
+    "author_email": {
+      "type": "string"
+    },
+    "group_id": {
+      "type": "string",
+      "description": "Related group if applicable"
+    },
+    "building_id": {
+      "type": "string",
+      "description": "Related building if applicable"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "replies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "content": {
+            "type": "string"
+          },
+          "author_name": {
+            "type": "string"
+          },
+          "author_email": {
+            "type": "string"
+          },
+          "date": {
+            "type": "string"
+          }
+        }
+      }
+    }
+  },
+  "required": [
+    "title",
+    "content"
+  ]
+}
