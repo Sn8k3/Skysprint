@@ -1,0 +1,84 @@
+{
+  "name": "Building",
+  "type": "object",
+  "properties": {
+    "name": {
+      "type": "string",
+      "description": "Name of the building"
+    },
+    "description": {
+      "type": "string",
+      "description": "Overview/description of the building"
+    },
+    "latitude": {
+      "type": "number",
+      "description": "Latitude coordinate"
+    },
+    "longitude": {
+      "type": "number",
+      "description": "Longitude coordinate"
+    },
+    "city": {
+      "type": "string",
+      "description": "City location"
+    },
+    "country": {
+      "type": "string",
+      "description": "Country location"
+    },
+    "floors": {
+      "type": "number",
+      "description": "Number of floors"
+    },
+    "height_meters": {
+      "type": "number",
+      "description": "Height in meters"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced",
+        "expert",
+        "legendary"
+      ],
+      "description": "Difficulty rating"
+    },
+    "image_url": {
+      "type": "string",
+      "description": "Main image of the building"
+    },
+    "strategies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          },
+          "author": {
+            "type": "string"
+          }
+        }
+      },
+      "description": "Strategies for this building"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "active",
+        "inactive"
+      ],
+      "default": "active"
+    }
+  },
+  "required": [
+    "name",
+    "latitude",
+    "longitude"
+  ]
+}
