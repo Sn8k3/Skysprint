@@ -1,0 +1,31 @@
+{
+  "name": "Donation",
+  "type": "object",
+  "properties": {
+    "donor_name": {
+      "type": "string"
+    },
+    "donor_email": {
+      "type": "string"
+    },
+    "amount": {
+      "type": "number"
+    },
+    "message": {
+      "type": "string"
+    },
+    "method": {
+      "type": "string",
+      "enum": [
+        "paypal",
+        "ko-fi",
+        "buymeacoffee",
+        "other"
+      ]
+    }
+  },
+  "required": [
+    "donor_name",
+    "amount"
+  ]
+}
