@@ -1,0 +1,19 @@
+{
+  "name": "DonateLinks",
+  "type": "object",
+  "properties": {
+    "buymeacoffee_url": {
+      "type": "string",
+      "description": "Buy Me a Coffee URL"
+    },
+    "paypal_url": {
+      "type": "string",
+      "description": "PayPal donation URL"
+    },
+    "kofi_url": {
+      "type": "string",
+      "description": "Ko-fi URL"
+    }
+  },
+  "required": []
+}
